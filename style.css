@@ -1,0 +1,287 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Centaur';
+    src: url('fonts/CENTAUR.TTF'),
+         url('fonts/CENTAUR.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Centaur', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #686256;
+    background: linear-gradient(
+        to right, 
+        #cab577 5%,  /* Left Margin Color */
+        #686256 5%,  /* Main Body Background Color Starts */
+        #686256 95%,  /* Main Body Background Color Ends */
+        #cab577 95%   /* Right Margin Color */
+    );
+}
+
+/* Container for content */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background-image: url('media/header.png'); /* Replace with the path to your image */
+    background-size: cover; /* This will ensure the image covers the entire header */
+    background-position: center; /* This will center the image in the header */
+    height: 125px; /* Adjust the height as needed */
+    color: #eaece5;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+.header-link {
+    color: inherit; /* Makes the color the same as the parent element */
+    text-decoration: none; /* Removes the underline from the link */
+}
+
+.search-container {
+    text-align: center; /* Center align the search box */
+    padding: 5px; /* Add some padding */
+}
+
+#searchForm input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #c5d5c5;
+    border-radius: 5px;
+    font-family: 'Centaur';
+}
+
+#searchForm button {
+    font-family: 'Centaur';
+    padding: 5px;
+    background-color: #cab577; /* Change button color as needed */
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#searchForm button:hover {
+    background-color: #c5d5c5; /* Darker shade for hover state */
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    background-color: #686256;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    font-size: 19px;
+    font-weight: bold;
+    color: #eaece5;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #cab577;
+}
+
+/* Main content area */
+
+h2 {
+    text-align: center;
+    color: #eaece5;
+    font-weight: bolder;
+    padding: 10px;
+    font-size:35px;
+}
+
+h3 {
+    text-align: center;
+    padding: 10px;
+    text-decoration: underline;
+    font-size: 25px;
+    color: #eaece5;
+}
+
+h3 a {
+    color: #eaece5; /* Replace with your desired color */
+    font-weight: bold;
+    text-decoration: none; /* Optional: removes the underline from links */
+}
+
+h3 a:hover {
+    color: #eaece5; /* Replace with the color for when the mouse hovers over the link */
+    text-decoration: underline; /* Optional: adds underline on hover */
+}
+
+p {
+    font-size: 19px;
+    text-align: center;
+    text-wrap: balance;
+    padding: 5px;
+    color: #eaece5;
+}
+
+p a {
+    color: #eaece5; /* Replace with your desired color */
+    text-decoration:underline; /* Optional: removes the underline from links */
+}
+
+p a:hover {
+    color: #eaece5; /* Replace with the color for when the mouse hovers over the link */
+    text-decoration: underline; /* Optional: adds underline on hover */
+}
+
+li {
+    font-size: 19px;
+    padding: 5px;
+    color: #eaece5;
+}
+
+li a {
+    color: #eaece5; /* Replace with your desired color */
+    text-decoration:underline; /* Optional: removes the underline from links */
+}
+
+li a:hover {
+    color: #eaece5; /* Replace with the color for when the mouse hovers over the link */
+    text-decoration: underline; /* Optional: adds underline on hover */
+}
+
+ul li {
+    padding-left: 10px; /* Adjust the value to control the indent level */
+}
+
+.content {
+    text-align: center; /* Center content */
+}
+
+.content-box {
+    border: 1px solid #ccc; /* Adjust the color as needed */
+    padding: 10px; /* Adjust the padding as needed */
+    margin: 0px 0; /* Adjust the margin as needed */
+    background-color: #cab577; /* Adjust the background color as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    border-radius: 0px; /* Optional: Rounds the corners of the box */
+    color: #eaece5;
+    font-weight: bold;
+}
+
+.content-container {
+    width: 80%; /* This should be 100% minus the total width of the colored margins */
+    margin: 0 auto; /* This centers the container on the page */
+    /* Add additional styling as needed */
+}
+
+/* Images */
+.image-container img {
+    margin: 0 auto;
+    width: 50%; /* Adjust as needed */
+    height: auto;
+    cursor: pointer; /* Indicates the image can be clicked */
+}
+
+img {
+    display: block; /* Remove inline nature of image */
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.clickable-image {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    position: relative; /* Needed for absolute positioning inside */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    z-index: 1; /* Ensure image is below the slider */
+    cursor: grab; /* Change cursor to indicate movability */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal-content:active {
+    cursor: grabbing;
+}
+
+#zoom-slider {
+    position: absolute;
+    top: 10%; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Ensures it's above the image */
+}
+
+#caption {
+    z-index: 2;
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.close {
+    position: absolute;
+    top: 50px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 1;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    font-weight: bold;
+    background: #cab577;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+}
