@@ -174,11 +174,9 @@ ul li {
 }
 
 .content-box {
-    border: 1px solid #ccc; /* Adjust the color as needed */
     padding: 10px; /* Adjust the padding as needed */
     margin: 0px 0; /* Adjust the margin as needed */
     background-color: #cab577; /* Adjust the background color as needed */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
     border-radius: 0px; /* Optional: Rounds the corners of the box */
     color: #eaece5;
     font-weight: bold;
