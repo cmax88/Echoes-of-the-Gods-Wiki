@@ -4,27 +4,36 @@ import ContentBox from './components/ContentBox';
 import ImageUploader from './components/ImageUploader';
 import TextEditor from './components/TextEditor';
 import Footer from './components/Footer';
+import React, { useState } from 'react';
+
 
 function App() {
+
+  const [text, setText] = useState('');
+  const [heading, setHeading] = useState('');
+  const [image, setImage] = useState(null);
+
+  // function for saving page
+ 
+
   return (
     <div className="App">
       <Header />
       <Nav />
-      <ContentBox />
+      <ContentBox heading = {heading} setHeading={setHeading} />
       <br></br>
-      <ImageUploader />
+      <ImageUploader image={image} setImage={setImage}/>
       <br></br>
-      <TextEditor />
+      <TextEditor text={text} setText={setText} />
       <br></br>
-      <button onClick={savePage}>Save Page</button>
+      <button onClick={() => savePage(text, heading, image)}>Save Page</button>
       <Footer />
     </div>
   );
 }
 
-function savePage() {
-  const htmlContent = `<!DOCTYPE html>
-
+ function savePage(text, heading, image) {
+    const htmlContent = `<!DOCTYPE html>
   <html lang="en">
   <head>
   <meta charset="utf-8"/>
@@ -50,24 +59,13 @@ function savePage() {
       </ul>
       </nav>
       <div class="content-box">
-    <h2>${pageHeading}</h2>
-  <!-- Image container - Uncomment when needed
-          <div class="image-container">
-              <img src="path-to-your-image.jpg" alt="Image Description" height="400" width="600" class="clickable-image">
-              <div id="myModal" class="modal">
-                  <span class="close">&times;</span>
-                  <input type="range" id="zoom-slider" min="1" max="3" step="0.01" value="1">
-                  <img class="modal-content" id="img01">
-                  <div id="caption"></div>
-              </div>
-          </div>
-          -->
+    <h2>${heading}</h2>
+    <div class="image-container"><img src= ${image}/></div>
   </div>
   <main>
   <div class="content-container">
   <section>
-  <h3>Section Title</h3>
-  <p>Section content goes here.</p>
+  <p>${text}</p>
   </section>
   <!-- Add more sections with relevant content -->
   </div>
@@ -83,7 +81,7 @@ function savePage() {
     const href = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = href;
-    link.download = 'static-page.html'; // This will be the name of the downloaded file
+    link.download = 'page.html'; // This will be the name of the downloaded file
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

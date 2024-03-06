@@ -1,8 +1,4 @@
-import React, { useState } from 'react';
-
-function TextEditor() {
-  const [text, setText] = useState('');
-
+function TextEditor({ text, setText }) {
   return (
     <div>
       <textarea
