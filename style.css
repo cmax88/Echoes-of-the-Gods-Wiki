@@ -6,25 +6,66 @@
 }
 
 @font-face {
-    font-family: 'Centaur';
-    src: url('fonts/CENTAUR.TTF'),
-         url('fonts/CENTAUR.TTF');
+    font-family:'Poppins';
+    src:url('fonts/Poppins-Regular.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
+.hero-section {
+    background-image: url('/media/home.png'); /* Add your hero image path */
+    height: 75vh; /* Set to the height of the viewer's screen */
+    background-size:cover;
+    background-position: center;
+    position: relative;
+    color: white;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 1.5em; /* Adjust size as needed */
+    color:#eaece5;
+    margin-bottom: 1em;
+    background-color: #686256ef;
+    border-radius: 10px;
+}
+
+.hero-content p {
+    font-size: 1em; /* Adjust size as needed */
+    color:#eaece5;
+    margin-bottom: 1.5em;
+    background-color: #686256ef;
+    border-radius: 10px;
+}
+
+.hero-btn {
+    background-color: #cab577; /* Adjust button color as needed */
+    color: #eaece5;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: .75em; /* Adjust font size as needed */
+}
+
+.hero-btn:hover {
+    background-color: #686256; /* Adjust for hover state */
+}
+
+/* Additional styling for nav, main content, and footer as needed */
+
+
 body {
-    font-family: 'Centaur', serif;
+    font-family: 'Poppins', serif;
     line-height: 1.6;
     color: #333;
     background-color: #686256;
-    background: linear-gradient(
-        to right, 
-        #cab577 5%,  /* Left Margin Color */
-        #686256 5%,  /* Main Body Background Color Starts */
-        #686256 95%,  /* Main Body Background Color Ends */
-        #cab577 95%   /* Right Margin Color */
-    );
 }
 
 /* Container for content */
@@ -36,14 +77,14 @@ body {
 
 /* Header */
 header {
-    background-image: url('media/header.png'); /* Replace with the path to your image */
-    background-size: auto; /* This will ensure the image covers the entire header */
-    background-position: center; /* This will center the image in the header */
+    background-image: url('media/home.png'); /* Replace with the path to your image */
+    background-size:cover; /* This will ensure the image covers the entire header */
+    background-position:top; /* This will center the image in the header */
     height: auto; /* Adjust the height as needed */
     color: #eaece5;
     padding: 20px 0;
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .header-link {
@@ -61,11 +102,11 @@ header {
     margin-right: 10px;
     border: 1px solid #c5d5c5;
     border-radius: 5px;
-    font-family: 'Centaur';
+    font-family: 'Poppins';
 }
 
 #searchForm button {
-    font-family: 'Centaur';
+    font-family: 'Poppins';
     padding: 5px;
     background-color: #cab577; /* Change button color as needed */
     color: #333;
@@ -81,17 +122,18 @@ header {
 /* Navigation Bar */
 nav ul {
     list-style: none;
-    background-color: #686256;
+    background-color: #686256ad;
+    background-size: auto;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
 }
 
 nav ul li {
-    display: inline;
+    display:inline;
 }
 
 nav ul li a {
-    font-size: 19px;
+    font-size:x-large;
     font-weight: bold;
     color: #eaece5;
     padding: 14px 16px;
@@ -108,7 +150,7 @@ h2 {
     text-align: center;
     color: #eaece5;
     font-weight: bolder;
-    padding: 10px;
+    padding: 5px;
     font-size:35px;
 }
 
