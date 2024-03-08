@@ -16,23 +16,25 @@
     background-image: url('/media/home.png'); /* Add your hero image path */
     height: 75vh; /* Set to the height of the viewer's screen */
     background-size:cover;
-    background-position: center;
+    background-position:center;
     position: relative;
     color: white;
 }
 
 .hero-content {
-    position: absolute;
+    position:absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align:center;
+    max-width: 90%;
 }
 
 .hero-content h1 {
     font-size: 1.5em; /* Adjust size as needed */
     color:#eaece5;
-    margin-bottom: 1em;
+    margin-top: .5em;
+    margin-bottom: .5em;
     background-color: #686256ef;
     border-radius: 10px;
 }
@@ -40,7 +42,7 @@
 .hero-content p {
     font-size: 1em; /* Adjust size as needed */
     color:#eaece5;
-    margin-bottom: 1.5em;
+    margin-bottom: .5em;
     background-color: #686256ef;
     border-radius: 10px;
 }
@@ -48,8 +50,8 @@
 .hero-btn {
     background-color: #cab577; /* Adjust button color as needed */
     color: #eaece5;
-    padding: 15px 25px;
     text-decoration: none;
+    padding: 10px;
     border-radius: 10px;
     font-size: .75em; /* Adjust font size as needed */
 }
@@ -66,6 +68,7 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #686256;
+    text-align: center;
 }
 
 /* Container for content */
@@ -78,13 +81,14 @@ body {
 /* Header */
 header {
     background-image: url('media/home.png'); /* Replace with the path to your image */
-    background-size:cover; /* This will ensure the image covers the entire header */
+    background-size:initial; /* This will ensure the image covers the entire header */
     background-position:top; /* This will center the image in the header */
     height: auto; /* Adjust the height as needed */
     color: #eaece5;
     padding: 20px 0;
     text-align: center;
     font-size: 40px;
+    
 }
 
 .header-link {
@@ -176,10 +180,15 @@ h3 a:hover {
 p {
     font-size: 19px;
     text-align: center;
-    text-wrap: balance;
-    padding: 5px;
+    padding: 15px 25px; /* Adjust padding as needed */
     color: #eaece5;
+    background-color: #cab577; /* Adjust background color as needed */
+    text-decoration: none;
+    border-radius: 10px;
+    display: inline-block; /* Change display to inline-block */
+    margin: -500 ; /* Center align if needed */
 }
+
 
 p a {
     color: #eaece5; /* Replace with your desired color */
@@ -324,4 +333,32 @@ footer {
     color: #333;
     text-align: center;
     padding: 14px 16px;
+}
+
+/* Adjust font sizes and paddings for small devices */
+@media screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.2em; /* Smaller font size for mobile */
+    }
+    .hero-content p {
+        font-size: 0.9em; /* Smaller font size for mobile */
+    }
+    .hero-btn {
+        padding: 10px 20px; /* Smaller padding for mobile */
+        font-size: .65em; /* Smaller font size for mobile */
+    }
+}
+
+/* Additional responsiveness for very small devices */
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1em; /* Even smaller font size for very small devices */
+    }
+    .hero-content p {
+        font-size: 0.8em; /* Even smaller font size for very small devices */
+    }
+    .hero-btn {
+        padding: 8px 16px; /* Reduce padding for very small devices */
+        font-size: .6em; /* Reduce font size for very small devices */
+    }
 }
