@@ -50,6 +50,7 @@
 .hero-btn {
     background-color: #cab577; /* Adjust button color as needed */
     color: #eaece5;
+    margin-top:.5em;
     text-decoration: none;
     padding: 10px;
     border-radius: 10px;
@@ -81,7 +82,7 @@ body {
 /* Header */
 header {
     background-image: url('media/home.png'); /* Replace with the path to your image */
-    background-size:initial; /* This will ensure the image covers the entire header */
+    background-size:cover; /* This will ensure the image covers the entire header */
     background-position:top; /* This will center the image in the header */
     height: auto; /* Adjust the height as needed */
     color: #eaece5;
@@ -130,10 +131,11 @@ nav ul {
     background-size: auto;
     text-align: center;
     padding: 10px;
+    display:inline-block;
 }
 
 nav ul li {
-    display:inline;
+    display:inline-block;
 }
 
 nav ul li a {
@@ -186,7 +188,6 @@ p {
     text-decoration: none;
     border-radius: 10px;
     display: inline-block; /* Change display to inline-block */
-    margin: -500 ; /* Center align if needed */
 }
 
 
