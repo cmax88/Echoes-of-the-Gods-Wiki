@@ -13,12 +13,16 @@
 }
 
 .hero-section {
-    background-image: url('/media/home.png'); /* Add your hero image path */
-    height: 65vh; /* Set to the height of the viewer's screen */
-    background-size:auto;
-    background-position:center;
-    position: relative;
-    color: #eaece5;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/home.png");
+
+  /* Set a specific height */
+    height: 100%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .hero-content {
@@ -65,6 +69,16 @@
 
 /* Additional styling for nav, main content, and footer as needed */
 
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: px;
+    color: #686256;
+}
 
 body {
     font-family: 'Poppins', serif;
@@ -83,15 +97,16 @@ body {
 
 /* Header */
 header {
-    background-image: url('media/home.png'); /* Replace with the path to your image */
-    background-size:cover; /* This will ensure the image covers the entire header */
-    background-position:top; /* This will center the image in the header */
-    height: auto; /* Adjust the height as needed */
-    color: #eaece5;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 40px;
-    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/home.png");
+
+    /* Set a specific height */
+    height: 100%;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 .header-link {
