@@ -70,3 +70,15 @@ document.getElementById('searchForm').onsubmit = function(event) {
 };
 
 });
+
+function addFavicon() {
+    var link = document.createElement('link');
+    link.type = 'image/x-icon';
+    link.rel = 'icon';
+    link.href = 'media/favicon.png';
+    link.href = '../media/favicon.png'; // Replace 'https://example.com/favicon.ico' with the actual path to your favicon
+    document.getElementsByTagName('head')[0].appendChild(link);
+  }
+
+  // Call the function when the document loads
+  document.addEventListener('DOMContentLoaded', addFavicon);

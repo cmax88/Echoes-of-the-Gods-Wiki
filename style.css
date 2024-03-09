@@ -14,16 +14,16 @@
 
 .hero-section {
     background-image: url('/media/home.png'); /* Add your hero image path */
-    height: 75vh; /* Set to the height of the viewer's screen */
-    background-size:cover;
+    height: 65vh; /* Set to the height of the viewer's screen */
+    background-size:auto;
     background-position:center;
     position: relative;
-    color: white;
+    color: #eaece5;
 }
 
 .hero-content {
     position:absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align:center;
@@ -31,26 +31,28 @@
 }
 
 .hero-content h1 {
-    font-size: 1.5em; /* Adjust size as needed */
+    font-size: 1.125em; /* Adjust size as needed */
     color:#eaece5;
-    margin-top: .5em;
+    margin-top: 8em;
     margin-bottom: .5em;
     background-color: #686256ef;
     border-radius: 10px;
+    padding: 5px;
 }
 
 .hero-content p {
-    font-size: 1em; /* Adjust size as needed */
+    font-size: .75em; /* Adjust size as needed */
     color:#eaece5;
-    margin-bottom: .5em;
+    margin-bottom: .75em;
     background-color: #686256ef;
     border-radius: 10px;
+    padding: 5px;
 }
 
 .hero-btn {
     background-color: #cab577; /* Adjust button color as needed */
     color: #eaece5;
-    margin-top:.5em;
+    margin-top:0em;
     text-decoration: none;
     padding: 10px;
     border-radius: 10px;
@@ -98,15 +100,15 @@ header {
 }
 
 .search-container {
-    text-align: center; /* Center align the search box */
-    padding: 5px; /* Add some padding */
+    text-align: right; /* Center align the search box */
+    padding: 10px; /* Add some padding */
 }
 
 #searchForm input[type="text"] {
     padding: 5px;
-    margin-right: 10px;
+    margin-right: 20px;
     border: 1px solid #c5d5c5;
-    border-radius: 5px;
+    border-radius: 10px;
     font-family: 'Poppins';
 }
 
@@ -116,7 +118,7 @@ header {
     background-color: #cab577; /* Change button color as needed */
     color: #333;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -135,7 +137,7 @@ nav ul {
 }
 
 nav ul li {
-    display:inline-block;
+    display:inline;
 }
 
 nav ul li a {
@@ -148,9 +150,17 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #cab577;
+    border-radius: 10px;
 }
 
 /* Main content area */
+h1 {
+    text-align: center;
+    color: #eaece5;
+    font-weight: bolder;
+    padding: 5px;
+    font-size:75px;
+}
 
 h2 {
     text-align: center;

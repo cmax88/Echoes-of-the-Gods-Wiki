@@ -115,9 +115,41 @@ function addFavicon() {
     var link = document.createElement('link');
     link.type = 'image/x-icon';
     link.rel = 'icon';
-    link.href = 'media/favicon.png'; // Replace 'https://example.com/favicon.ico' with the actual path to your favicon
+    link.href = 'media/favicon.png';
+    link.href = '../media/favicon.png'; // Replace 'https://example.com/favicon.ico' with the actual path to your favicon
     document.getElementsByTagName('head')[0].appendChild(link);
   }
 
   // Call the function when the document loads
   document.addEventListener('DOMContentLoaded', addFavicon);
+
+  document.getElementById('searchForm').onsubmit = function(event) {
+    event.preventDefault();
+    removeHighlights(); // Function to clear previous highlights
+    var searchTerm = document.getElementById('searchInput').value.trim();
+    if (searchTerm) {
+        highlightText(document.body, searchTerm);
+    }
+};
+
+function highlightText(element, searchTerm) {
+    if (element.hasChildNodes()) {
+        element.childNodes.forEach(function(child) {
+            highlightText(child, searchTerm);
+        });
+    } else if (element.nodeType === Text.TEXT_NODE) {
+        if (element.textContent.toLowerCase().includes(searchTerm.toLowerCase())) {
+            const span = document.createElement('span');
+            span.className = 'highlighted';
+            span.textContent = element.textContent;
+            element.replaceWith(span);
+            span.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+}
+
+function removeHighlights() {
+    document.querySelectorAll('.highlighted').forEach(function(highlighted) {
+        highlighted.replaceWith(document.createTextNode(highlighted.textContent));
+    });
+}
